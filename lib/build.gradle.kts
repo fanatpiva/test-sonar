@@ -9,6 +9,15 @@
 plugins {
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
+    id "org.sonarqube" version "3.4.0.2513"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "fanatpiva_test-sonar"
+    property "sonar.organization", "fanatpiva"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
 }
 
 repositories {
